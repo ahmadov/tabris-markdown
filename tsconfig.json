@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ES2015",
+    "moduleResolution": "node",
+    "target": "es6",
+    "lib": ["es2017", "dom"],
+    "outDir": "./dist/",
+    "rootDir": "./src/",
+    "declaration": false,
+    "strictNullChecks": true,
+    "alwaysStrict": true,
+    "experimentalDecorators": true,
+    "noUnusedLocals": true,
+    "noImplicitAny": true,
+    "sourceMap": true,
+    "inlineSourceMap": false,
+    "skipLibCheck": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx"
+  ]
+}

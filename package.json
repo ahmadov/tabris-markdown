@@ -1,0 +1,24 @@
+{
+  "name": "tabris-markdown",
+  "version": "0.1.0",
+  "description": "Tabris.js markdown parser",
+  "author": "Elmi Ahmadov <eahmadov@eclipsesource.com>",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "scripts": {
+    "build": "rollup -c ./rollup.js && npm run dts",
+    "clean": "rm -rf ./dist",
+    "dts": "dts-generator --project ./tsconfig.json --prefix tabris-markdown --name tabris-markdown --main tabris-markdown/index --out ./dist/index.d.ts"
+  },
+  "peerDependencies": {
+    "marked": "^1.2.9"
+  },
+  "devDependencies": {
+    "@types/marked": "^1.2.2",
+    "dts-generator": "^2.1.0",
+    "rollup": "~2.26.0",
+    "rollup-plugin-typescript2": "~0.27.0",
+    "typescript": "^4.1.3"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "outDir": "./demo-dist/",
+    "rootDir": "./",
+    "preserveWatchOutput": true,
+    "sourceMap": false,
+    "inlineSourceMap": true
+  },
+  "include": [
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
+    "./demo/**/*.ts",
+    "./demo/**/*.tsx"
+  ]
+}

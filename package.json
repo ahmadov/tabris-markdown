@@ -8,10 +8,12 @@
   "typings": "dist/index.d.ts",
   "scripts": {
     "build": "rollup -c ./rollup.js && npm run dts",
-    "clean": "rm -rf ./dist",
+    "clean": "rm -rf ./dist ./demo-dist",
     "dts": "dts-generator --project ./tsconfig.json --prefix tabris-markdown --name tabris-markdown --main tabris-markdown/index --out ./dist/index.d.ts",
     "test": "npm run mocha && npm run build",
-    "mocha": "ts-mocha -p ./test/tsconfig.json ./test/**/*.spec.ts"
+    "mocha": "ts-mocha -p ./test/tsconfig.json ./test/**/*.spec.ts",
+    "start": "tabris serve -w -a -m ./demo-dist/demo/index.js",
+    "watch": "tsc -w -p ./tsconfig-demo.json --preserveWatchOutput --inlineSourceMap"
   },
   "peerDependencies": {
     "tabris": "^3.7.1",

@@ -17,7 +17,7 @@ interface LinkToken extends MarkedToken {
   href: string;
 }
 
-enum TokenType {
+export enum TokenType {
   Space = 'space',
   Text = 'text',
   Paragraph = 'paragraph',
@@ -28,13 +28,13 @@ enum TokenType {
   Link = 'link'
 }
 
-interface Token {
+export interface Token {
   type: TokenType;
   depth?: number;
   href?: string;
 }
 
-interface TokenWithValue extends Token {
+export interface TokenWithValue extends Token {
   value: string;
 }
 

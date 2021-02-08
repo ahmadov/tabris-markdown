@@ -5,6 +5,7 @@
     "target": "es6",
     "lib": ["es2017", "dom"],
     "outDir": "./dist/",
+    "rootDir": "./src/",
     "declaration": false,
     "strictNullChecks": true,
     "alwaysStrict": true,

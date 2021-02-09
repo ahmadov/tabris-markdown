@@ -175,6 +175,20 @@ describe('MarkdownParser', () => {
       expect(result).to.equal('<em><b>foo</b></em>');
     });
 
+    it('single header should not create a new line break', () => {
+      const result = testInput('# header');
+
+      expect(result).to.equal("<span font='bold 20px'>header</span>");
+    });
+
+    it('multi line header should create a new line break', () => {
+      const result = testInput(`# header \ncontent\n# header 2`);
+
+      expect(result).to.equal(
+        "<span font='bold 20px'>header</span><br/>content<span font='bold 20px'>header 2</span>"
+      );
+    });
+
     function testInput(text: string) {
       return new MarkdownParser(text).toHtml();
     }

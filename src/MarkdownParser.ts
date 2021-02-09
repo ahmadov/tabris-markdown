@@ -151,7 +151,8 @@ export class MarkdownParser {
 
   private toHtmlHeading = (token: HeadingToken): string => {
     const fontSize = this.calculateFontSizeForHeading(token.depth);
-    return `<span font='bold ${fontSize}px'>${this._toHtml(token.tokens)}</span><br/>`;
+    const newLineBreak = token.raw.endsWith('\n') ? '<br/>' : '';
+    return `<span font='bold ${fontSize}px'>${this._toHtml(token.tokens)}</span>${newLineBreak}`;
   }
 
   private toHtmlLink = (token: LinkToken): string => {
